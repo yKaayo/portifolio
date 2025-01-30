@@ -20,6 +20,12 @@
   }
 }
 
+/* Variables */
+.text__gradient--green {
+  @apply bg-gradient-to-r from-primary-green to-green-600 bg-clip-text text-transparent;
+}
+/* Variables - End */
+
 /* Hero */
 .hero {
   @apply relative flex flex-col justify-center items-center h-full w-full rounded-2xl bg-black bg-[url(./assets/img/laptops.webp)] bg-contain bg-no-repeat bg-center container mx-auto;

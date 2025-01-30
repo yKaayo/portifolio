@@ -1,6 +1,6 @@
 import Hero from "./layout/Hero"
 import Slider from "./layout/Slider"
-import Sobremim from "./layout/Sobremim"
+import Projects from "./layout/Projects"
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <Hero />
       <Slider />
-      <Sobremim />
+      <Projects />
     </>
   )
 }
