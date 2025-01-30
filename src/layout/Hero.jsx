@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import RoundedBorder from "../components/RoundedBorder";
-import Header from "./Header";
+import arrowsBottomChevronIcon from "../assets/icon/arrows_bottom_chevron.svg"
 
 export default function Hero() {
   const carrerText = [
@@ -54,8 +54,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <Header />
-
         <div className="flex flex-col items-center justify-center gap-3">
           <p className="px-3 py-1 text-white rounded-md border-2 border-white">
             Hello, World!
@@ -74,10 +72,12 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="absolute bottom-10 right-8 text-white">
+        <div className="absolute bottom-40 right-8 text-white">
           <p className="font-bold text-primary-green text-xl text-end">+ 1 ANO</p>
           <p>DE EXPERIÊNCIA</p>
         </div>
+
+        <img className="absolute bottom-8 h-16" src={arrowsBottomChevronIcon} alt="" />
       </section>
     </main>
   );

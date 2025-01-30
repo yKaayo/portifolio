@@ -4,6 +4,20 @@
   /* Color */
   --color-background: #1e2939;
   --color-primary-green: #00dd03;
+  --color-secundary-green: #0c5e00;
+  --color-primary-gray: #919191;
+
+  /* Animation */
+  --animate-scroll: scroll 16s linear infinite;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-71.5%);
+    }
+  }
 }
 
 /* Hero */
@@ -12,7 +26,8 @@
 }
 
 #carrerText {
-  animation: writing 5s steps(22, end) infinite, flashing .6s ease-in-out infinite;
+  animation: writing 5s steps(22, end) infinite,
+    flashing 0.6s ease-in-out infinite;
 }
 
 @keyframes flashing {
@@ -24,10 +39,16 @@
 
 /* Header */
 .nav__link {
-  @apply text-white
+  @apply text-white px-5 py-2 rounded-full hover:bg-secundary-green duration-300;
 }
 
 .nav__link.active {
-  
+  @apply bg-primary-green;
 }
 /* Header - End */
+
+/* Slider */
+.slider__icons:hover {
+  animation-play-state: paused;
+}
+/* Slider - End */
