@@ -23,7 +23,7 @@ export default function Slider() {
   const SLIDER = [...ICONS, ...ICONS].map((icon, index) => (
     <div
       key={index}
-      className="flex items-center flex-[0_0_auto] mx-10 px-5 gap-2 h-[80px] text-center"
+      className="flex items-center flex-[0_0_auto] mx-10 px-5 gap-2 h-[80px] text-center duration-500 hover:scale-125"
     >
       <img className="h-full" src={icon.img} alt={`Ícone do ${icon.name}`} />
       <p className="text-white text-xl font-semibold">{icon.name}</p>

@@ -21,8 +21,8 @@
 }
 
 /* Variables */
-.text__gradient--green {
-  @apply bg-gradient-to-r from-primary-green to-green-600 bg-clip-text text-transparent;
+.gradient--green {
+  @apply bg-gradient-to-r from-primary-green to-green-600;
 }
 /* Variables - End */
 

@@ -100,10 +100,10 @@ export default function Projects() {
   }
 
   return (
-    <section className="py-5 bg-background">
+    <section className="py-5 bg-background" id="projects">
       <div className="flex flex-col items-center gap-10 container mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-white">
-          Meus <span className="text__gradient--green">Projetos</span> 
+        <h2 className="mb-2 text-4xl md:text-6xl font-bold text-white">
+          Meus <span className="gradient--green bg-clip-text text-transparent">Projetos</span>
         </h2>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between gap-x-20 gap-y-10 w-full px-5 md:px-10">
@@ -113,12 +113,12 @@ export default function Projects() {
             if (allProjects[project.id]) {
               return (
                 <li
-                  className="w-full rounded-2xl bg-cover aspect-[19.4/9] hover:scale-110 duration-300 shadow-2xl border-2 border-black"
+                  className="w-full rounded-2xl bg-cover aspect-[19.4/9] hover:scale-105 md:hover:scale-110 duration-300 shadow-2xl border-2 border-white"
                   style={{ backgroundImage: `url(${project.img})` }}
                   key={project.id}
                 >
                   <a
-                    className="flex justify-start items-end h-full rounded-xl bg-gradient-to-t from-black to-transparent text-white font-semibold ps-5 pb-5 "
+                    className="flex justify-start items-end h-full rounded-xl bg-gradient-to-t from-black to-transparent text-white font-semibold ps-5 pb-5"
                     href={`${project.link}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -133,7 +133,12 @@ export default function Projects() {
         </ul>
 
         {visibleProjects < projectsIndex.length && (
-          <button className="px-6 py-2 rounded-2xl mt-5 hover:text-black bg-transparent border-2 border-white text-2xl font-bold duration-300 cursor-pointer hover:bg-white hover:scale-110 text-white" onClick={handleVisibleProjects}>VER MAIS</button>
+          <button
+            className="px-6 py-2 rounded-xl mt-5 hover:text-black bg-transparent border-2 border-white text-2xl font-bold duration-300 cursor-pointer hover:bg-white hover:scale-110 text-white"
+            onClick={handleVisibleProjects}
+          >
+            VER MAIS
+          </button>
         )}
       </div>
     </section>

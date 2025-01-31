@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import RoundedBorder from "../components/RoundedBorder";
-import arrowsBottomChevronIcon from "../assets/icon/arrows_bottom_chevron.svg"
 
 export default function Hero() {
   const carrerText = [
@@ -65,7 +64,7 @@ export default function Hero() {
             Eu sou Caio,
             <span
               id="carrerText"
-              className="block overflow-hidden md:h-[70px] whitespace-nowrap border-r-8 text__gradient--green border-white mx-auto mt-2"
+              className="block overflow-hidden md:h-[70px] whitespace-nowrap border-r-8 gradient--green border-white mx-auto mt-2 bg-clip-text text-transparent"
             >
               {carrerText[index].text}
             </span>
@@ -73,11 +72,29 @@ export default function Hero() {
         </div>
 
         <div className="absolute bottom-40 right-8 text-white">
-          <p className="font-bold text__gradient--green text-xl text-end">+ 1 ANO</p>
+          <p className="font-bold gradient--green text-xl text-end bg-clip-text text-transparent">
+            + 1 ANO
+          </p>
           <p>DE EXPERIÊNCIA</p>
         </div>
 
-        <img className="absolute bottom-8 h-16" src={arrowsBottomChevronIcon} alt="" />
+        <div className="flex items-center gap-3 absolute bottom-10  p-2 rounded-3xl border-2 border-white">
+          <div className="absolute left-0 bg-white/25 h-full w-full rounded-2xl"></div>
+
+          <a
+            className="relative px-5 py-2 rounded-2xl text-xl font-bold gradient--green duration-500 hover:scale-105"
+            href="#projects"
+          >
+            Portifólio
+          </a>
+
+          <a
+            className="relative mx-2 text-xl border-b-2 text-white border-transparent font-semibold duration-500 hover:border-primary-green"
+            href=""
+          >
+            Me contrate
+          </a>
+        </div>
       </section>
     </main>
   );
