@@ -32,8 +32,8 @@
 }
 
 #carrerText {
-  animation: writing 5s steps(22, end) infinite,
-    flashing 0.6s ease-in-out infinite;
+  animation: writing 5.2s steps(22, end) infinite,
+    flashing 0.7s ease-in-out infinite;
 }
 
 @keyframes flashing {
@@ -45,11 +45,11 @@
 
 /* Header */
 .nav__link {
-  @apply text-white px-5 py-2 rounded-full hover:bg-secundary-green duration-300;
-}
+  @apply border-primary-green after:bg-primary-green text-white relative border-b-0 pb-1 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 font-semibold after:rounded-full after:duration-500 hover:after:w-[40%] text-lg;
 
-.nav__link.active {
-  @apply bg-primary-green;
+  &.active {
+    @apply after:w-full;
+  }
 }
 /* Header - End */
 

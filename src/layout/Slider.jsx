@@ -31,7 +31,7 @@ export default function Slider() {
   ));
 
   return (
-    <section className="flex py-20 w-full bg-background overflow-hidden whitespace-nowrap">
+    <section className="flex py-10 md:py-20 w-full bg-background overflow-hidden whitespace-nowrap">
       <div className="slider__icons flex animate-scroll">{SLIDER}</div>
     </section>
   );

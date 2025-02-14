@@ -103,7 +103,10 @@ export default function Projects() {
     <section className="py-5 bg-background" id="projects">
       <div className="flex flex-col items-center gap-10 container mx-auto">
         <h2 className="mb-2 text-4xl md:text-6xl font-bold text-white">
-          Meus <span className="gradient--green bg-clip-text text-transparent">Projetos</span>
+          Meus{" "}
+          <span className="gradient--green bg-clip-text text-transparent">
+            Projetos
+          </span>
         </h2>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between gap-x-20 gap-y-10 w-full px-5 md:px-10">
@@ -134,7 +137,7 @@ export default function Projects() {
 
         {visibleProjects < projectsIndex.length && (
           <button
-            className="px-6 py-2 rounded-xl mt-5 hover:text-black bg-transparent border-2 border-white text-2xl font-bold duration-300 cursor-pointer hover:bg-white hover:scale-110 text-white"
+            className="px-6 py-2 rounded-xl mt-5 hover:text-black bg-transparent border-2 border-white text-2xl font-bold duration-300 cursor-pointer hover:bg-white hover:scale-105 text-white"
             onClick={handleVisibleProjects}
           >
             VER MAIS
