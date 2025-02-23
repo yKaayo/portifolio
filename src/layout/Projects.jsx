@@ -214,7 +214,7 @@ export default function Projects() {
       });
     });
 
-    const lineSpeedMultipliers = [0.8, 1, 0.9, 0.8];
+    const lineSpeedMultipliers = [0.9, 1, 0.8, 0.7];
     const updateTargetPositions = (scrollProgress = 0) => {
       path.forEach((line, lineIndex) => {
         line.letterElements.forEach((element, i) => {
@@ -337,12 +337,16 @@ export default function Projects() {
             if (allProjects[project.id]) {
               return (
                 <li
-                  className="flex h-fit w-[10%] flex-col gap-2 bg-black p-2"
+                  className="flex h-fit w-[10%] flex-col gap-2"
                   key={project.id}
                 >
-                  <div className="flex-1 overflow-hidden">
-                    <img src={project.img} className="object-cover" alt="" />
-                  </div>
+                  <a href={project.link} target="_blank" rel="noopener">
+                    <img
+                      src={project.img}
+                      className="flex-1 overflow-hidden rounded-2xl border-4 border-black object-cover duration-300 hover:scale-110 hover:shadow-2xl"
+                      alt=""
+                    />
+                  </a>
                 </li>
               );
             }

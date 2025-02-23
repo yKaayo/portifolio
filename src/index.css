@@ -74,6 +74,6 @@ canvas {
 }
 
 .letter {
-  @apply absolute z-[2] origin-center text-[12rem] font-bold text-primary-green will-change-transform transform-3d;
+  @apply text-primary-green absolute z-[2] origin-center text-[11.5rem] font-bold will-change-transform transform-3d pointer-events-none;
 }
 /* Projects -End */
