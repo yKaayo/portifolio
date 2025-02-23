@@ -16,7 +16,7 @@ export default function Hero() {
     gsap.fromTo(
       element,
       { scale: 1 },
-      { scale: scaleValue, duration: 2, ease: "power1.out" }
+      { scale: scaleValue, duration: 2, ease: "power1.out" },
     );
   };
 
@@ -103,12 +103,12 @@ export default function Hero() {
   };
 
   return (
-    <main className="flex justify-center items-center h-svh p-5 bg-background">
+    <main className="bg-dark-blue flex h-svh items-center justify-center p-5">
       <section className="hero">
-        <div className="absolute top-0 z-[1] pb-2 px-3 rounded-md bg-background">
+        <div className="bg-dark-blue absolute top-0 z-[1] rounded-md px-3 pb-2">
           <RoundedBorder className="-left-5 shadow-[10px_-10px_0_#1e2939]" />
           <RoundedBorder className="-right-5 shadow-[-10px_-10px_0_#1e2939]" />
-          <ul className="px-5 py-3 w-fit rounded-md bg-black flex gap-5">
+          <ul className="flex w-fit gap-5 rounded-md bg-black px-5 py-3">
             {navLinks.map((link) => (
               <a
                 onClick={() => setActiveLink(link.name)}
@@ -127,38 +127,38 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-3">
-          <p className="px-3 py-1 text-white rounded-md border-2 border-white">
+          <p className="rounded-md border-2 border-white px-3 py-1 text-white">
             Hello, World!
           </p>
           <h2
             id="placeholder"
             ref={placeholderRef}
-            className="text-4xl md:text-6xl font-bold text-center text-white"
+            className="text-center text-4xl font-bold text-white md:text-6xl"
           >
             Eu sou Caio,
-          <CarrerText />
+            <CarrerText />
           </h2>
         </div>
 
-        <div className="absolute bottom-40 right-8 text-white">
-          <p className="font-bold gradient--green text-xl text-end bg-clip-text text-transparent">
+        <div className="absolute right-8 bottom-40 text-white">
+          <p className="gradient--green bg-clip-text text-end text-xl font-bold text-transparent">
             + 1 ANO
           </p>
           <p>DE EXPERIÊNCIA</p>
         </div>
 
-        <div className="flex items-center gap-3 absolute bottom-10 p-2 rounded-3xl border border-white">
-          <div className="absolute left-0 bg-white/25 h-full w-full rounded-2xl"></div>
+        <div className="absolute bottom-10 flex items-center gap-3 rounded-3xl border border-white p-2">
+          <div className="absolute left-0 h-full w-full rounded-2xl bg-white/25"></div>
 
           <a
-            className="relative px-5 py-2 rounded-2xl text-xl font-bold gradient--green duration-500 hover:scale-105"
+            className="gradient--green relative rounded-2xl px-5 py-2 text-xl font-bold duration-500 hover:scale-105"
             href="#projects"
           >
             Portifólio
           </a>
 
           <a
-            className="relative mx-2 text-xl border-b-2 text-white border-transparent font-semibold duration-500 hover:border-primary-green"
+            className="hover:border-primary-green relative mx-2 border-b-2 border-transparent text-xl font-semibold text-white duration-500"
             href="#contact"
           >
             Me contrate

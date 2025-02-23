@@ -2,7 +2,7 @@
 
 @theme {
   /* Color */
-  --color-background: #1e2939;
+  --color-dark-blue: #1e2939;
   --color-primary-green: #00dd03;
   --color-secundary-green: #0c5e00;
   --color-primary-gray: #919191;
@@ -22,17 +22,18 @@
 
 /* Variables */
 .gradient--green {
-  @apply bg-gradient-to-r from-primary-green to-green-600;
+  @apply from-primary-green bg-gradient-to-r to-green-600;
 }
 /* Variables - End */
 
 /* Hero */
 .hero {
-  @apply relative flex flex-col justify-center items-center h-full w-full rounded-2xl bg-black bg-[url(./assets/img/laptops.webp)] bg-contain bg-no-repeat bg-center container mx-auto;
+  @apply relative container mx-auto flex h-full w-full flex-col items-center justify-center rounded-2xl bg-black bg-[url(./assets/img/laptops.webp)] bg-contain bg-center bg-no-repeat;
 }
 
 #carrerText {
-  animation: writing 5.2s steps(22, end) infinite,
+  animation:
+    writing 5.2s steps(22, end) infinite,
     flashing 0.7s ease-in-out infinite;
 }
 
@@ -45,7 +46,7 @@
 
 /* Header */
 .nav__link {
-  @apply border-primary-green after:bg-primary-green text-white relative border-b-0 pb-1 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 font-semibold after:rounded-full after:duration-500 hover:after:w-[40%] text-lg;
+  @apply border-primary-green after:bg-primary-green relative border-b-0 pb-1 text-lg font-semibold text-white after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:rounded-full after:duration-500 hover:after:w-[40%];
 
   &.active {
     @apply after:w-full;
@@ -58,3 +59,21 @@
   animation-play-state: paused;
 }
 /* Slider - End */
+
+/* Projects */
+canvas {
+  @apply absolute top-0 left-0;
+}
+
+#grid-canvas {
+  @apply z-0;
+}
+
+#letters-canvas {
+  @apply z-[1];
+}
+
+.letter {
+  @apply absolute z-[2] origin-center text-[12rem] font-bold text-primary-green will-change-transform transform-3d;
+}
+/* Projects -End */
