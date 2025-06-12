@@ -33,7 +33,7 @@ export default function CarrerText() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prevIndex) =>
-        prevIndex === carrerText.length - 1 ? 0 : prevIndex + 1
+        prevIndex === carrerText.length - 1 ? 0 : prevIndex + 1,
       );
     }, 5000);
 
@@ -45,12 +45,10 @@ export default function CarrerText() {
       <style>{keyframe}</style>
       <span
         id="carrerText"
-        className="block overflow-hidden md:h-[70px] whitespace-nowrap border-r-8 gradient--green border-white mx-auto mt-2 bg-clip-text text-transparent"
+        className="gradient--green mx-auto mt-2 block overflow-hidden border-r-8 border-white bg-clip-text whitespace-nowrap text-transparent md:h-[70px]"
       >
         {carrerText[index].text}
       </span>
     </>
   );
 }
-
-

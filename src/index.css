@@ -24,6 +24,10 @@
 .gradient--green {
   @apply from-primary-green bg-gradient-to-r to-green-600;
 }
+
+.section {
+  @apply bg-dark-blue flex items-center justify-center p-5;
+}
 /* Variables - End */
 
 /* Hero */
@@ -74,6 +78,6 @@ canvas {
 }
 
 .letter {
-  @apply text-primary-green absolute z-[2] origin-center text-[11.5rem] font-bold will-change-transform transform-3d pointer-events-none;
+  @apply text-primary-green pointer-events-none absolute z-[2] origin-center text-[11.5rem] font-bold will-change-transform transform-3d;
 }
 /* Projects -End */

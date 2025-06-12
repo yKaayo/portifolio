@@ -1,16 +1,18 @@
-import Hero from "./layout/Hero"
-import Slider from "./layout/Slider"
-import Projects from "./layout/Projects"
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+
+// Layout
+import Hero from "./layout/Hero";
+import Projects from "./layout/Projects";
 
 function App() {
-
   return (
-    <>
-      <Hero />
-      <Slider />
-      <Projects />
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/projetos" element={<Projects />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
