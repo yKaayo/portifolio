@@ -8,6 +8,8 @@ import previsaoDoTempo from "../assets/img/previsaodotempo.webp";
 import myDrones from "../assets/img/mydrone.webp";
 import cloudMe from "../assets/img/cloudme.webp";
 import furniro from "../assets/img/furniro.webp";
+import synthetica from "../assets/img/synthetica.webp";
+import fogaoALenha from "../assets/img/fogao_a_lenha.webp";
 
 export const projects = [
   {
@@ -15,7 +17,7 @@ export const projects = [
     link: "https://camila-advogada.vercel.app",
     title: "Advocacia em Pauta",
     description: "Landing page para uma advogacia",
-    technologies: ["React", "Tailwind"],
+    technologies: ["React", "Tailwind", "GSAP", "Flowbite"],
     category: "Front-end",
     featured: true,
   },
@@ -26,7 +28,27 @@ export const projects = [
     description:
       "E-commerce",
     technologies: ["React", "Tailwind"],
-    category: "Full-Stack",
+    category: "Front-end",
+    featured: true,
+  },
+  {
+    image: synthetica,
+    link: "https://synthetica-kaayo.vercel.app/",
+    title: "Synthetica",
+    description:
+      "Blog",
+    technologies: ["React", "Tailwind", "Python", "FastAPI", "GSAP", "Lottie", "Framer Motion"],
+    category: "Full-stack",
+    featured: true,
+  },
+  {
+    image: fogaoALenha,
+    link: "https://fogao-a-lenha-sigma.vercel.app/",
+    title: "Fogão a Lenha",
+    description:
+      "Landing Page",
+    technologies: ["React", "Tailwind", "Three"],
+    category: "Front-end",
     featured: true,
   },
 ];

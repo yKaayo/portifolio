@@ -14,14 +14,7 @@ export default function Projects() {
 
       <div className="relative px-4 pt-32 pb-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          {/* Header Section */}
           <div className="mb-16 text-center">
-            <div className="mb-6 inline-block rounded-full border border-gray-700 bg-gray-800/50 px-4 py-2 backdrop-blur-sm">
-              <span className="font-mono text-sm text-green-400">
-                {"<Projetos />"}
-              </span>
-            </div>
-
             <h1 className="mb-6 text-5xl font-bold md:text-7xl text-white">
               Meus{" "}
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
