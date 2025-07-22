@@ -1,10 +1,8 @@
 import { useRef } from "react";
+import { Link } from "react-router";
 
 // Components
 import CarrerText from "../components/CarrerText";
-
-// Layout
-import Header from "./Header";
 
 export default function Hero() {
   const placeholderRef = useRef(null);
@@ -12,8 +10,6 @@ export default function Hero() {
   return (
     <main className="section h-screen">
       <section className="hero">
-        <Header />
-
         <div className="flex flex-col items-center justify-center gap-3">
           <p className="rounded-md border-2 border-white px-3 py-1 text-white">
             Hello, World!
@@ -38,19 +34,19 @@ export default function Hero() {
         <div className="absolute bottom-10 flex items-center gap-3 rounded-3xl border border-white p-2">
           <div className="absolute left-0 h-full w-full rounded-2xl bg-white/25"></div>
 
-          <a
+          <Link
             className="gradient--green relative rounded-2xl px-5 py-2 text-xl font-bold duration-500 hover:scale-105"
-            href="#projects"
+            to="/projetos"
           >
-            Portifólio
-          </a>
+            Projetos
+          </Link>
 
-          <a
+          <Link
             className="hover:border-primary-green relative mx-2 border-b-2 border-transparent text-xl font-semibold text-white duration-500"
-            href="#contact"
+            to="/contato"
           >
             Me contrate
-          </a>
+          </Link>
         </div>
       </section>
     </main>
