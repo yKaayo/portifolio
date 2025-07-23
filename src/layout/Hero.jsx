@@ -3,9 +3,25 @@ import { Link } from "react-router";
 
 // Components
 import CarrerText from "../components/CarrerText";
+import Modal from "../components/Modal"
+
+// Icons
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 
 export default function Hero() {
   const placeholderRef = useRef(null);
+
+  const icons = [
+    {
+      icon: <FaLinkedin className="size-8 text-[#0A66C2]" />,
+      link: "https://www.linkedin.com/in/caio-prates-dev/",
+    },
+    {
+      icon: <FaGithub className="size-8 text-white" />,
+      link: "https://github.com/yKaayo",
+    },
+  ];
 
   return (
     <main className="section h-screen">
@@ -31,6 +47,19 @@ export default function Hero() {
           <p>DE EXPERIÊNCIA</p>
         </div>
 
+        <div className="absolute bottom-40 left-8 z-[1] flex flex-col gap-5">
+          {icons.map((icon) => (
+            <a
+              key={icon.icon}
+              href={icon.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {icon.icon}
+            </a>
+          ))}
+        </div>
+
         <div className="absolute bottom-10 flex items-center gap-3 rounded-3xl border border-white p-2">
           <div className="absolute left-0 h-full w-full rounded-2xl bg-white/25"></div>
 
@@ -41,12 +70,7 @@ export default function Hero() {
             Projetos
           </Link>
 
-          <Link
-            className="hover:border-primary-green relative mx-2 border-b-2 border-transparent text-xl font-semibold text-white duration-500"
-            to="/contato"
-          >
-            Me contrate
-          </Link>
+          <Modal />
         </div>
       </section>
     </main>

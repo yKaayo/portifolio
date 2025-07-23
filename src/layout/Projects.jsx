@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 // Components
 import Card from "../components/Card";
 
@@ -23,11 +25,26 @@ export default function Projects() {
         </div>
 
         <div className="container mx-auto mb-16">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <Card key={project.link} item={project} />
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid auto-rows-min gap-8 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {projects.map((project, index) => {
+              const isLarge = index % 4 === 0;
+
+              return (
+                <div
+                  key={project.link}
+                  className={` ${isLarge ? "col-span-2 row-span-2" : ""} h-min rounded-xl bg-white shadow`}
+                >
+                  <Card item={project} />
+                </div>
+              );
+            })}
+          </motion.div>
         </div>
       </div>
     </section>

@@ -7,7 +7,6 @@ export default function Header({ className }) {
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "Projetos", link: "/projetos" },
-    { name: "Contato", link: "/contato" },
   ];
 
   return (
