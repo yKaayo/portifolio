@@ -26,13 +26,43 @@
 }
 
 .section {
-  @apply bg-dark-blue flex items-center justify-center p-5;
+  @apply flex items-center justify-center p-5;
 }
 /* Variables - End */
 
 /* Hero */
 .hero {
-  @apply relative container mx-auto flex h-full w-full flex-col items-center justify-center rounded-2xl bg-black bg-[url(./assets/img/laptops.webp)] bg-contain bg-center bg-no-repeat;
+  @apply relative container mx-auto flex h-full w-full flex-col items-center justify-center rounded-2xl bg-black/65 bg-[url(./assets/img/laptops.webp)] bg-contain bg-center bg-no-repeat backdrop-blur-xl;
+
+  clip-path: polygon(
+    0% 0%,
+
+    41.5% 0,
+    41.7% 0.5px,
+    41.9% 1px,
+    42.1% 3px,
+    42.3% 6px,
+    42.5% 11px,
+
+    42.5% 53px,
+    43% 60px,
+    43.5% 63px,
+
+    56.5% 63px,
+    57% 60px,
+    57.5% 53px,
+
+    57.5% 11px,
+    57.7% 6px,
+    57.9% 3px,
+    58.1% 1px,
+    58.3% 0.5px,
+    58.5% 0,
+
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
 }
 
 #carrerText {
