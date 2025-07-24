@@ -8,7 +8,7 @@ import Header from "./layout/Header";
 function App() {
   return (
     <Router>
-        <Header />
+      <Header />
 
       <Routes>
         <Route path="/" element={<Hero />} />

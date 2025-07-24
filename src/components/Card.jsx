@@ -1,3 +1,6 @@
+// Component
+import GlareHover from "./GlareHover";
+
 export default function Card({ item }) {
   return (
     <a
@@ -11,13 +14,20 @@ export default function Card({ item }) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="relative w-fit transition-transform">
+      <GlareHover
+        glareColor="#ffffff"
+        glareOpacity={0.3}
+        glareAngle={-30}
+        glareSize={300}
+        transitionDuration={1200}
+        playOnce={false}
+      >
         <img
           src={item.image}
           alt={item.title}
           className="h-min object-contain"
         />
-        <div className="absolute bottom-0 h-[25%] w-full rounded-lg bg-linear-to-t from-black/70 from-30% to-transparent"></div>
+        <div className="absolute bottom-0 h-[25%] w-full bg-linear-to-t from-black/70 from-30% to-transparent"></div>
 
         <div className="absolute top-3 left-3 rounded-md border-green-500/30 bg-green-500/80 px-2 py-1 text-green-950">
           {item.category}
@@ -26,7 +36,7 @@ export default function Card({ item }) {
         <h3 className="absolute bottom-3 left-3 z-[1] text-white transition-colors group-hover:text-green-400">
           {item.title}
         </h3>
-      </div>
+      </GlareHover>
     </a>
   );
 }
