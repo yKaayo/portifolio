@@ -3,10 +3,10 @@ import { Link } from "react-router";
 
 // Components
 import CarrerText from "../components/CarrerText";
-import Modal from "../components/Modal";
 
 // Icons
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 import DarkVeil from "../components/DarkVeil";
 
 export default function Hero() {
@@ -21,6 +21,10 @@ export default function Hero() {
       icon: <FaGithub className="size-8 text-white" />,
       link: "https://github.com/yKaayo",
     },
+    {
+      icon: <BiLogoGmail className="size-8 text-red-600" />,
+      link: "mailto:caiokaea@gmail.com?subject=Olá Caio, tenho interesse em seus serviços!",
+    },
   ];
 
   return (
@@ -28,7 +32,7 @@ export default function Hero() {
       <div className="fixed h-screen w-full">
         <DarkVeil />
       </div>
-      
+
       <main className="section h-screen">
         <section className="hero">
           <div className="flex flex-col items-center justify-center gap-3">
@@ -65,8 +69,8 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="absolute bottom-10 flex items-center gap-3 rounded-3xl border border-white p-2">
-            <div className="absolute left-0 h-full w-full rounded-2xl bg-white/25"></div>
+          <div className="absolute bottom-10 flex items-center gap-3 overflow-hidden rounded-3xl border border-white p-2">
+            <div className="absolute left-0 h-full w-full bg-white/30 backdrop-blur-xl"></div>
 
             <Link
               className="gradient--green relative rounded-2xl px-5 py-2 text-xl font-bold duration-500 hover:scale-105"
@@ -75,7 +79,15 @@ export default function Hero() {
               Projetos
             </Link>
 
-            <Modal />
+            <a
+              href="https://wa.me/5535991049862?text=Olá%20Caio,%20tenho%20interesse%20em%20seus%20serviços!"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Mandar mensagem pelo Whatsapp"
+              className="hover:border-primary-green relative mx-2 cursor-pointer border-b-2 border-transparent text-xl font-semibold text-white duration-500"
+            >
+              Me contrate
+            </a>
           </div>
         </section>
       </main>

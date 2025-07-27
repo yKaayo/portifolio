@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 export default function Header({ className }) {
   const navLinks = [
-    { name: "Home", link: "/" },
+    { name: "Início", link: "/" },
     { name: "Projetos", link: "/projetos" },
   ];
 
