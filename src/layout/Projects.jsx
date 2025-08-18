@@ -42,8 +42,8 @@ export default function Projects() {
 
           <div className="container mx-auto mb-16">
             <div className="grid grid-cols-1 gap-5 sm:auto-rows-min sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {projects.map((project, index) => {
-                const isLarge = index % getIsLargeNum() === 0;
+              {projects.map((project, i) => {
+                const isLarge = i % getIsLargeNum() === 0;
 
                 return (
                   <motion.div
@@ -51,8 +51,8 @@ export default function Projects() {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className={` ${isLarge && window.innerWidth >= 640 ? "col-span-2 row-span-2" : ""} h-min rounded-lg bg-white shadow overflow-hidden` }
+                    viewport={{ once: true, amount: 0.2 }}
+                    className={` ${isLarge && window.innerWidth >= 640 ? "col-span-2 row-span-2" : ""} h-min overflow-hidden rounded-lg bg-white shadow`}
                   >
                     <Card item={project} />
                   </motion.div>

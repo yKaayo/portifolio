@@ -3,11 +3,11 @@ import { Link } from "react-router";
 
 // Components
 import CarrerText from "../components/CarrerText";
+import DarkVeil from "../components/DarkVeil";
 
 // Icons
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
-import DarkVeil from "../components/DarkVeil";
 
 export default function Hero() {
   const placeholderRef = useRef(null);
@@ -86,7 +86,7 @@ export default function Hero() {
               aria-label="Mandar mensagem pelo Whatsapp"
               className="hover:border-primary-green relative mx-2 cursor-pointer border-b-2 border-transparent text-xl font-semibold text-white duration-500"
             >
-              Me contrate
+              Entrar em contato
             </a>
           </div>
         </section>

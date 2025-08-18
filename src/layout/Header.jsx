@@ -11,7 +11,9 @@ export default function Header({ className }) {
       <header
         className={`absolute z-[1] rounded-md px-3 pt-5 pb-2 ${className}`}
       >
-        <ul className={`flex w-fit gap-5 rounded-md bg-black/80 backdrop-blur-xl px-5 py-3`}>
+        <ul
+          className={`flex w-fit gap-5 rounded-md bg-black/80 px-5 py-3 backdrop-blur-xl`}
+        >
           {navLinks.map((link) => (
             <NavLink
               to={link.link}

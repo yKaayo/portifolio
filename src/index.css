@@ -37,7 +37,35 @@
   clip-path: polygon(
     0% 0%,
 
-    41.5% 0,
+    /* início do recorte esquerdo */
+    calc(49.2% - 90px) 0,     
+    calc(49.4% - 90px) .5px,     
+    calc(49.6% - 90px) 1px,     
+    calc(49.8% - 90px) 3px,     
+    calc(50% - 90px) 6px,     
+
+    /* desce até a altura do header */
+    calc(50% - 90px) 54px,
+    calc(50.2% - 90px) 57px,
+    calc(50.4% - 90px) 59px,
+    calc(50.6% - 90px) 59.5px,
+    calc(50.8% - 90px) 60px,
+
+    /* vai até o final do header */ 
+    calc(49.2% + 90px) 60px,
+    calc(49.4% + 90px) 59.5px,
+    calc(49.6% + 90px) 59px,
+    calc(49.8% + 90px) 57px,
+    calc(50% + 90px) 54px,
+
+    /* volta pro topo */
+    calc(50% + 90px) 6px,    
+    calc(50.2% + 90px) 3px,     
+    calc(50.4% + 90px) 1px,     
+    calc(50.6% + 90px) .5px,     
+    calc(50.8% + 90px) 0,     
+
+    /* 41.5% 0,
     41.7% 0.5px,
     41.9% 1px,
     42.1% 3px,
@@ -57,7 +85,7 @@
     57.9% 3px,
     58.1% 1px,
     58.3% 0.5px,
-    58.5% 0,
+    58.5% 0, */
 
     100% 0%,
     100% 100%,
