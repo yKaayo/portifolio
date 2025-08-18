@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 // Components
 import Card from "../components/Card";
 import DarkVeil from "../components/DarkVeil";
+import Stack from "../components/Stack";
 
 // Constraints
 import { projects } from "../constraints/projects";
+import stacks from "../constraints/stacks";
 
 export default function Projects() {
   const getIsLargeNum = () => {
@@ -41,6 +43,15 @@ export default function Projects() {
           </div>
 
           <div className="container mx-auto mb-16">
+            <div className="fixed bottom-5 right-8 z-[3]">
+              <Stack
+                randomRotation={true}
+                sensitivity={100}
+                sendToBackOnClick={true}
+                cardDimensions={{ width: 100, height: 100 }}
+                cardsData={stacks}
+              />
+            </div>
             <div className="grid grid-cols-1 gap-5 sm:auto-rows-min sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {projects.map((project, i) => {
                 const isLarge = i % getIsLargeNum() === 0;
